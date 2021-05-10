@@ -11,6 +11,9 @@ if ARGV.length == 1
             if File.executable?(file)
                 ext = "bin"
             end
+            if ext == ""
+                ext = "no_ext"
+            end
             Dir.mkdir("#{src_dir}/#{ext}") unless Dir.exists?("#{src_dir}/#{ext}")
             des_dir = "#{src_dir}/#{ext}/"
             FileUtils.move(file, des_dir)
