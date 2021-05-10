@@ -8,6 +8,9 @@ if ARGV.length == 1
 
         filenames.each do |file|
             ext = File.extname(file).gsub(".", "")
+            if File.executable?(file)
+                ext = "bin"
+            end
             Dir.mkdir("#{src_dir}/#{ext}") unless Dir.exists?("#{src_dir}/#{ext}")
             des_dir = "#{src_dir}/#{ext}/"
             FileUtils.move(file, des_dir)
