@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
     s.metadata    = { "source_code_uri" => "https://github.com/AjitHande/gems/tree/main/fileorganiser" }
     s.executables << 'fileorganiser'
     s.required_rubygems_version = '3.0.8'
-    s.required_ruby_version = '2.5.0'
+    s.required_ruby_version = '2.4.4.296'
     s.post_install_message = "  ==================================================================================== \n
   Thanks for installing! 
   
